@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tshirelesto Tours | Discover Soweto</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 7%;
+      color: white;
+      background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        linear-gradient(135deg, #8b4513, #111);
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 30px;
+      color: #eee;
+    }
+
+    .button {
+      display: inline-block;
+      background: #f4b400;
+      color: #111;
+      padding: 14px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .button.dark {
+      background: white;
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .tours {
+      background: #f5f5f5;
+    }
+
+    .tour-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .tour-card {
+      background: white;
+      padding: 28px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .tour-card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .tour-card p {
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .booking {
+      background: #111;
+      color: white;
+    }
+
+    .booking-box {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #080808;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 6px;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">TSHIRELESTO TOURS</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#tours">Tours</a>
+      <a href="#booking">Book</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Discover Soweto Differently.</h1>
+
+      <p>
+        Experience the stories, culture, history and beauty of Soweto
+        through authentic local tours with Tshirelesto Tours.
+      </p>
+
+      <a href="#tours" class="button">Explore Our Tours</a>
+      <a href="#booking" class="button dark">Book a Tour</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>Our Story</h2>
+      <p>More than a tour. It's an experience.</p>
+    </div>
+
+    <div class="about">
+      <p>
+        Tshirelesto Tours is a local tourism company focused on showing
+        visitors the other side of Soweto — the untold stories, powerful
+        history, vibrant communities and beautiful places that make Soweto
+        unique.
+      </p>
+    </div>
+  </section>
+
+  <section class="tours" id="tours">
+    <div class="section-title">
+      <h2>Our Tours</h2>
+      <p>Choose an experience that suits you.</p>
+    </div>
+
+    <div class="tour-grid">
+
+      <div class="tour-card">
+        <h3>Soweto Cultural Tour</h3>
+        <p>
+          Explore the culture, people, history and everyday life of Soweto
+          with a knowledgeable local guide.
+        </p>
+        <a href="#booking" class="button">Book Now</a>
+      </div>
+
+      <div class="tour-card">
+        <h3>Soweto History Tour</h3>
+        <p>
+          Discover important historical places and hear the stories that
+          shaped Soweto and South Africa.
+        </p>
+        <a href="#booking" class="button">Book Now</a>
+      </div>
+
+      <div class="tour-card">
+        <h3>Soweto Cycling Tour</h3>
+        <p>
+          Experience Soweto on two wheels while discovering local landmarks,
+          stories and hidden gems.
+        </p>
+        <a href="#booking" class="button">Book Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <div class="section-title">
+      <h2>Book Your Tour</h2>
+      <p>Send us your booking request.</p>
+    </div>
+
+    <div class="booking-box">
+
+      <form onsubmit="submitBooking(event)">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Full Name"
+          required
+        >
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        >
+
+        <input
+          type="date"
+          id="date"
+          required
+        >
+
+        <select id="tour" required>
+          <option value="">Select a Tour</option>
+          <option>Soweto Cultural Tour</option>
+          <option>Soweto History Tour</option>
+          <option>Soweto Cycling Tour</option>
+        </select>
+
+        <input
+          type="number"
+          id="people"
+          placeholder="Number of Guests"
+          min="1"
+          required
+        >
+
+        <textarea
+          id="message"
+          placeholder="Any special requests or questions?"
+        ></textarea>
+
+        <button class="button" type="submit">
+          Submit Booking Request
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Tshirelesto Tours. All rights reserved.</p>
+    <p>Discover Soweto. Experience the story.</p>
+  </footer>
+
+  <script>
+    function submitBooking(event) {
+      event.preventDefault();
+
+      alert(
+        "Thank you for your booking request! " +
+        "We will contact you to confirm your tour."
+      );
+    }
+  </script>
+
+</body>
+  </html>
